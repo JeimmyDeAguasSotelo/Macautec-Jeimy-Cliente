@@ -107,7 +107,7 @@ export default class Agenda extends React.Component {
           <Table>
             <thead>
               <tr>
-                <th><h1>Agenda general {host}</h1></th>
+                <th><h1>Agenda general</h1></th>
               </tr>
             </thead>
           </Table>

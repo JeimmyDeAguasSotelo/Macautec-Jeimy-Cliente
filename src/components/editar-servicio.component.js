@@ -28,7 +28,7 @@ export default class EditarServicio extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/servicios/editar-servicio/' + this.props.match.params.id)
+    axios.get('https://macautec-jeimy-server.vercel.app/servicios/editar-servicio/' + this.props.match.params.id)
       .then(res => {
         this.setState({
           nombre: res.data.nombre,
@@ -76,7 +76,7 @@ export default class EditarServicio extends Component {
       actualizado: ahora
     };
 
-    axios.put('http://localhost:4000/servicios/editar-servicio/' + this.props.match.params.id, servicioObject)
+    axios.put('https://macautec-jeimy-server.vercel.app/servicios/editar-servicio/' + this.props.match.params.id, servicioObject)
       .then((res) => {
         //console.log(res.data)
         alert('Servicio editado con exito')

@@ -61,7 +61,7 @@ export default class CrearServicio extends Component {
       actualizado: ahora
     };
 
-    axios.post('http://localhost:4000/servicios/crear-servicio', ServicioObject)
+    axios.post('https://macautec-jeimy-server.vercel.app/servicios/crear-servicio', ServicioObject)
       .then(res => console.log(res.data));
       alert('Servicio creado con exito')
       //this.props.history.push('/servicios');

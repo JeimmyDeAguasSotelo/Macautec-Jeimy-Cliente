@@ -33,7 +33,7 @@ export default class ListaServicios extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/servicios/')
+    axios.get('https://macautec-jeimy-server.vercel.app/servicios/')
       .then(res => {
         this.setState({
           servicios: res.data,

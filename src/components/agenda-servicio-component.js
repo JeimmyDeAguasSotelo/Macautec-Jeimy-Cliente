@@ -39,7 +39,7 @@ export default class AgendaServicio extends React.Component {
     constructor(props){
     super(props);      
 
-      axios.get('http://localhost:4000/citas/servicio/'+this.props.match.params.id)
+      axios.get('https://macautec-jeimy-server.vercel.app/citas/servicio/'+this.props.match.params.id)
       .then(res => {
         console.log(res.data)
         var data = res.data;         

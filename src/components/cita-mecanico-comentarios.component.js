@@ -40,7 +40,7 @@ export default class ListaCitas extends Component {
     };
     //console.log(ComentarioObject)
 
-    axios.post('http://localhost:4000/comentarios/crear-comentario', ComentarioObject)
+    axios.post('https://macautec-jeimy-server.vercel.app/comentarios/crear-comentario', ComentarioObject)
       .then(res => console.log(res.data));
       //console.log(ComentarioObject)
       
@@ -54,7 +54,7 @@ export default class ListaCitas extends Component {
 
   componentDidMount() {
     //console.log(this.props.match.params.id)
-    axios.get('http://localhost:4000/citas/editar-cita/'+this.props.match.params.id)
+    axios.get('https://macautec-jeimy-server.vercel.app/citas/editar-cita/'+this.props.match.params.id)
       .then(res => {
         //console.log(res.data)
         this.setState({
@@ -67,7 +67,7 @@ export default class ListaCitas extends Component {
         console.log(error);
       })
 
-    axios.get('http://localhost:4000/comentarios/'+this.props.match.params.id)
+    axios.get('https://macautec-jeimy-server.vercel.app/comentarios/'+this.props.match.params.id)
       .then(res => {
         //console.log(res.data)
         this.setState({

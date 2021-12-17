@@ -13,7 +13,7 @@ export default class UsuarioTableRow extends Component {
     
     borrarUsuario() {
         if(window.confirm('Esta seguro de borrar el usuario?')){
-            axios.delete('http://localhost:4000/usuarios/borrar-usuario/' + this.props.obj._id)
+            axios.delete('https://macautec-jeimy-server.vercel.app/usuarios/borrar-usuario/' + this.props.obj._id)
             .then((res) => {
                 console.log('Usuario borrado con exito!')
                 window.location.reload();

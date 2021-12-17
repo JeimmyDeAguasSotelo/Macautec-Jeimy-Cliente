@@ -12,7 +12,7 @@ export default class CitaTableRow extends Component {
 
     borrarCita() {
         if(window.confirm('Esta seguro de borrar la cita?')){
-            axios.delete('http://localhost:4000/citas/borrar-cita/' + this.props.obj._id)
+            axios.delete('https://macautec-jeimy-server.vercel.app/citas/borrar-cita/' + this.props.obj._id)
                 .then((res) => {
                     console.log('Cita borrada con exito!')
                     window.location.reload();

@@ -41,7 +41,7 @@ export default class EditarCita extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/citas/editar-cita/' + this.props.match.params.id)
+    axios.get('https://macautec-jeimy-server.vercel.app/citas/editar-cita/' + this.props.match.params.id)
       .then(res => {
         var id = {}
         if(res.data.mecanico){
@@ -69,13 +69,13 @@ export default class EditarCita extends Component {
         console.log(error);
       })
 
-      axios.get('http://localhost:4000/servicios/activos').then(res => {
+      axios.get('https://macautec-jeimy-server.vercel.app/servicios/activos').then(res => {
         this.setState({
           servicios: res.data
         });
       });
       
-      axios.get('http://localhost:4000/usuarios/mecanicos').then(res => {
+      axios.get('https://macautec-jeimy-server.vercel.app/usuarios/mecanicos').then(res => {
     
         this.setState({
           mecanicos: res.data
@@ -159,7 +159,7 @@ export default class EditarCita extends Component {
       actualizado: ahora
     };
 
-    axios.put('http://localhost:4000/citas/editar-cita/' + this.props.match.params.id, CitaObject)
+    axios.put('https://macautec-jeimy-server.vercel.app/citas/editar-cita/' + this.props.match.params.id, CitaObject)
       .then((res) => {
         //console.log(res.data)
         alert('Cita editada con exito')

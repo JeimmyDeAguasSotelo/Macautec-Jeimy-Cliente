@@ -47,7 +47,7 @@ export default class ListaCitas extends Component {
     const session = localStorage.getItem('token');
     const sess = JSON.parse(session)
     //console.log(sess.usuario._id)
-    axios.get('http://localhost:4000/citas/mecanico/'+sess.usuario._id)
+    axios.get('https://macautec-jeimy-server.vercel.app/citas/mecanico/'+sess.usuario._id)
       .then(res => {
         this.setState({
           citas: res.data,

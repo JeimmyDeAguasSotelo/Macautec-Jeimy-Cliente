@@ -34,7 +34,7 @@ export default class EditarUsuario extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/usuarios/editar-usuario/' + this.props.match.params.id)
+    axios.get('https://macautec-jeimy-server.vercel.app/usuarios/editar-usuario/' + this.props.match.params.id)
       .then(res => {
         this.setState({
           nombre: res.data.nombre,
@@ -111,7 +111,7 @@ export default class EditarUsuario extends Component {
       actualizado: ahora 
     };
 
-    axios.put('http://localhost:4000/usuarios/editar-usuario/' + this.props.match.params.id, usuarioObject)
+    axios.put('https://macautec-jeimy-server.vercel.app/usuarios/editar-usuario/' + this.props.match.params.id, usuarioObject)
       .then((res) => {
         //console.log(res.data)
         alert('Usuario editado con exito')

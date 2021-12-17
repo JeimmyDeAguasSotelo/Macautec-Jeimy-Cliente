@@ -45,7 +45,7 @@ export default class ListaUsuarios extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/usuarios/')
+    axios.get('https://macautec-jeimy-server.vercel.app/usuarios/')
       .then(res => {
         this.setState({
           usuarios: res.data,

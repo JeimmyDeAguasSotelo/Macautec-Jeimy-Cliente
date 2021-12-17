@@ -11,7 +11,7 @@ export default class ComentarioTableRow extends Component {
     }
 
     borrarComentario() {
-        axios.delete('http://localhost:4000/comentarios/borrar-comentario/' + this.props.obj._id)
+        axios.delete('https://macautec-jeimy-server.vercel.app/comentarios/borrar-comentario/' + this.props.obj._id)
             .then((res) => {
                 console.log('Cita borrada con exito!')
                 window.location.reload();

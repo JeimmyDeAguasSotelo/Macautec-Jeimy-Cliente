@@ -99,13 +99,13 @@ export default class CrearCita extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/servicios/activos').then(res => {
+    axios.get('https://macautec-jeimy-server.vercel.app/servicios/activos').then(res => {
       this.setState({
         servicios: res.data
       });
     });
     
-    axios.get('http://localhost:4000/usuarios/mecanicos').then(res => {
+    axios.get('https://macautec-jeimy-server.vercel.app/usuarios/mecanicos').then(res => {
   
       this.setState({
         mecanicos: res.data
@@ -132,7 +132,7 @@ export default class CrearCita extends Component {
     };
     //console.log(CitaObject)
 
-    axios.post('http://localhost:4000/citas/crear-cita', CitaObject)
+    axios.post('https://macautec-jeimy-server.vercel.app/citas/crear-cita', CitaObject)
     .then(res => console.log(res.data));
       alert('Cita creada con exito')
       //this.props.history.push('/citas');

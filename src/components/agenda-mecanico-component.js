@@ -39,7 +39,7 @@ export default class AgendaMecanico extends React.Component {
     constructor(props){
     super(props);
 
-      axios.get('http://localhost:4000/citas/mecanico/'+this.props.match.params.id)
+      axios.get('https://macautec-jeimy-server.vercel.app/citas/mecanico/'+this.props.match.params.id)
       .then(res => {
         //console.log(res.data)
         var data = res.data;         

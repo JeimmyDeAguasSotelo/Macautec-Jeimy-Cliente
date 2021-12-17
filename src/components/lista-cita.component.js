@@ -45,7 +45,7 @@ export default class ListaCitas extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/citas/')
+    axios.get('https://macautec-jeimy-server.vercel.app/citas/')
       .then(res => {
         this.setState({
           citas: res.data,

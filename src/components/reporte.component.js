@@ -39,7 +39,7 @@ export default class Reportes extends Component {
     var filtro = desde+'/'+hasta
 
     //console.log('filtrofecha: '+this.state.fecha_desde+'/'+this.state.fecha_hasta);
-    axios.get('http://localhost:4000/citas/servicio-mas-solicitado/'+filtro)
+    axios.get('https://macautec-jeimy-server.vercel.app/citas/servicio-mas-solicitado/'+filtro)
       .then(res => {
         if(res.data[0] != null)
           this.setState({
@@ -55,7 +55,7 @@ export default class Reportes extends Component {
         console.log(error);
       });
 
-    axios.get('http://localhost:4000/citas/servicio-menos-solicitado/'+filtro)
+    axios.get('https://macautec-jeimy-server.vercel.app/citas/servicio-menos-solicitado/'+filtro)
       .then(res => {
         if(res.data[0] != null)
           this.setState({
@@ -71,7 +71,7 @@ export default class Reportes extends Component {
         console.log(error);
       });
 
-    axios.get('http://localhost:4000/citas/servicios-completos/'+filtro)
+    axios.get('https://macautec-jeimy-server.vercel.app/citas/servicios-completos/'+filtro)
       .then(res => {
         if(res.data[0] != null)
           this.setState({
@@ -87,7 +87,7 @@ export default class Reportes extends Component {
         console.log(error);
       });
 
-    axios.get('http://localhost:4000/citas/servicios-mecanico-por-dia/'+filtro)
+    axios.get('https://macautec-jeimy-server.vercel.app/citas/servicios-mecanico-por-dia/'+filtro)
       .then(res => {
         this.setState({
           lista_asignaciones: res.data
